@@ -3,10 +3,13 @@ dotenv.config();
 
 import express from "express";
 import connectDatabase from "./config/database.js";
+import productRouter from "./routes/product.route.js";
 
 const server = express();
 
 server.use(express.json());
+
+server.use("/api/products",productRouter)
 
 const PORT = process.env.PORT;
 
