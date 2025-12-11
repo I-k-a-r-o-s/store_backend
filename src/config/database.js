@@ -5,7 +5,7 @@ const connectDatabase = async () => {
     await mongoose.connect(process.env.MONGODB_URI);
     console.log(`MongoDB Connection Initialized!`);
   } catch (error) {
-    console.log("Error in \"database.js\":", error);
+    console.log("Connection Initialization Error:", error);
     process.exit(1);
   }
 };
