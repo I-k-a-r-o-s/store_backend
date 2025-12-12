@@ -4,8 +4,11 @@ dotenv.config();
 import express from "express";
 import connectDatabase from "./config/database.js";
 import productRouter from "./routes/product.route.js";
+import cors from "cors";
 
 const server = express();
+
+server.use(cors())
 
 server.use(express.json());
 
